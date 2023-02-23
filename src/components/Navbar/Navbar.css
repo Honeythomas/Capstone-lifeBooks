@@ -1,10 +1,12 @@
 .n-wrapper {
   height: 10vh;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: 2rem;
   top: 0;
   color: black;
+  border-radius: 80px;
+  
 }
 .n-left {
   flex: 1;
@@ -42,7 +44,7 @@
 
 .n-button {
   flex: 2;
-  display: flex;
+  /* display: flex; */
 }
 
 @media screen and (max-width: 480px) {

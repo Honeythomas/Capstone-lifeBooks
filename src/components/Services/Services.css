@@ -23,6 +23,8 @@
 
 .card {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 20rem;
   width: 10rem;
   border: 5px;

@@ -7,7 +7,7 @@ const navbar = () => {
     <div
       className="n-wrapper"
       id="Navbar"
-      style={{ backgroundColor: "White", display: "flex" }}
+      style={{ backgroundColor: "Aqua", display: "flex" }}
     >
       {/* left */}
       <div className="n-left">
