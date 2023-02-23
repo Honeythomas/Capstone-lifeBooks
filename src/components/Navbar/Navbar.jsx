@@ -4,10 +4,16 @@ import "./Navbar.css";
 import { Link } from "react-scroll";
 const navbar = () => {
   return (
-    <div className="n-wrapper" id="Navbar">
+    <div
+      className="n-wrapper"
+      id="Navbar"
+      style={{ backgroundColor: "White", display: "flex" }}
+    >
       {/* left */}
       <div className="n-left">
-        <div className="n-name">LIFE Coach</div>
+        <div className="n-name">
+          <button className="button n-button">Life-Coach</button>
+        </div>
         <Toggle />
       </div>
       {/* right */}

@@ -1,75 +1,50 @@
 .services {
-  padding: 0 3rem 0 3rem;
   display: flex;
-  height: 30rem;
-  margin-bottom: 8rem;
-  margin-top: 9rem;
-  margin-bottom: 13rem;
-  /* scroll view */
-  padding-top: 3rem;
+  /* height: 100rem; */
+  margin-bottom: 2rem;
+  margin-top: 15rem;
+  margin-bottom: 3rem;
+  /* scroll: view; */
+  padding-top: 1rem;
 }
+
 /* left side */
 .awesome {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* gap: 20px; */
+  gap: 20px;
 }
 
-.awesome > :nth-child(1) {
-  color: var(--black);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.awesome > :nth-child(2) {
-  color: var(--orange);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.awesome > :nth-child(3) {
-  color: var(--gray);
-  font-size: 14px;
-  margin-top: 1rem;
-}
-.s-button {
-  width: 8rem;
-  height: 2rem;
-  margin-top: 1rem;
-}
-/* right sided */
-.cards {
-  position: relative;
-}
-.cards > * {
-  position: absolute;
+.seperate {
+  display: flex;
+  gap: 20px;
 }
 
-/* blur */
-.s-blur2 {
-  left: 14rem;
-  top: 8rem;
+.card {
+  display: flex;
+  height: 20rem;
+  width: 10rem;
+  border: 5px;
+  border-color: black;
 }
 
-.s-blur1 {
-  top: 13rem;
-  left: -18rem;
+.card-text {
+  align-items: center;
+  font-size: small;
+  color: black;
 }
 
-@media screen and (max-width: 480px) {
-  .services {
-    margin-top: 0;
-    flex-direction: column;
-    gap: 5rem;
-    height: 66rem;
-    padding: 0;
-  }
+.button {
+  height: 1rem;
+  width: 5rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+}
 
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 17rem;
-  }
-  .cards > * {
-    position: static;
-  }
+.card-title {
+  display: flex;
+  text-align: center;
 }

@@ -7,7 +7,7 @@ import Shopify from "../../img/Shopify.png";
 import Facebook from "../../img/Facebook.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 const Works = () => {
   // context
   const theme = useContext(themeContext);
@@ -20,7 +20,7 @@ const Works = () => {
       <div className="w-left">
         <div className="awesome">
           {/* dark Mode */}
-          <span style={{ color: darkMode ? "white" : "" }}>
+          {/* <span style={{ color: darkMode ? "white" : "" }}>
             Works for All these
           </span>
           <span>Brands & Clients</span>
@@ -33,10 +33,10 @@ const Works = () => {
             y dummy text of printingLorem
             <br />
             ispum is simpley dummy text of printing
-          </spane>
-          <Link to="contact" smooth={true} spy={true}>
+          </spane> */}
+          {/* <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
-          </Link>
+          </Link> */}
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -46,7 +46,7 @@ const Works = () => {
         {/* right side */}
       </div>
       <div className="w-right">
-        <motion.div
+        {/* <motion.div
           initial={{ rotate: 45 }}
           whileInView={{ rotate: 0 }}
           viewport={{ margin: "-40px" }}
@@ -68,10 +68,10 @@ const Works = () => {
           <div className="w-secCircle">
             <img src={Facebook} alt="" />
           </div>
-        </motion.div>
+        </motion.div> */}
         {/* background Circles */}
-        <div className="w-backCircle blueCircle"></div>
-        <div className="w-backCircle yellowCircle"></div>
+        {/* <div className="w-backCircle blueCircle"></div>
+        <div className="w-backCircle yellowCircle"></div> */}
       </div>
     </div>
   );

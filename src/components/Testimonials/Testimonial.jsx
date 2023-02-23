@@ -15,36 +15,36 @@ const Testimonial = () => {
     {
       img: profilePic1,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Great platform to build your skills. Also a good user experience.",
     },
     {
       img: profilePic2,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Great platform to build your skills. Also a good user experience.",
     },
     {
       img: profilePic3,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Great platform to build your skills. Also a good user experience.",
     },
     {
       img: profilePic4,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Great platform to build your skills. Also a good user experience.",
     },
   ];
 
   return (
     <div className="t-wrapper" id="testimonial">
       <div className="t-heading">
-        <span>Clients always get </span>
-        <span>Exceptional Work </span>
-        <span>from me...</span>
+        {/* <span>Feedback </span> */}
+        <span>Feedback </span>
+        <span>from the user...</span>
         <div
           className="blur t-blur1"
           style={{ background: "var(--purple)" }}
         ></div>
-        <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
+        <div className="blur t-blur2" style={{ background: "white" }}></div>
       </div>
       <Swiper
         // install Swiper modules

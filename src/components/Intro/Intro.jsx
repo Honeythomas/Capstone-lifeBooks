@@ -30,7 +30,7 @@ const Intro = () => {
           <span style={{ color: darkMode ? "white" : "" }}>
             Benefits of learning through "Life Coach"
           </span>
-          <span>Honey Thomas/Mohsin Ali/Rahil Khan</span>
+          <span>Welcome</span>
           <span>
             Life coaching involves working with clients to help improve their
             quality of life through various emotions and actions. A Life Coach
@@ -55,8 +55,15 @@ const Intro = () => {
 
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
+          <img
+            src={Github}
+            alt="https://github.com/Honeythomas/Capstone-lifeCoach/settings/access?guidance_task="
+          />
+
+          <img
+            src={LinkedIn}
+            alt="https://www.linkedin.com/in/honey-thomas-35ab18206/"
+          />
           <img src={Instagram} alt="" />
         </div>
       </div>
@@ -66,13 +73,6 @@ const Intro = () => {
         <img src={Vector2} alt="" />
         <img src={boy} alt="" />
         {/* animation */}
-        <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        />
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
         <div
