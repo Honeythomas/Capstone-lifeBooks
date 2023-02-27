@@ -17,6 +17,23 @@ const Services = () => {
           <span id="subheading">Various types of books available</span>
         </div>
 
+        <div className="container n-right">
+          <form>
+            <div className="form-group">
+              <input
+                type="text"
+                className="input-control mb-10"
+                placeholder="Search for Books"
+                autoComplete="off"
+              />
+
+              <button type="submit" className="btn btn-danger">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+
         <div className="main">
           <div className="card">
             <img
