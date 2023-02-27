@@ -13,7 +13,7 @@ const Services = () => {
       {" "}
       <div className="container">
         <div className="heading">
-          <h3 id="heading">Courses</h3>
+          <h3 id="heading">Books</h3>
           <span id="subheading">Various types of books available</span>
         </div>
 

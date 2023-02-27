@@ -14,23 +14,19 @@ const Testimonial = () => {
   const clients = [
     {
       img: profilePic1,
-      review:
-        "Great platform to build your skills. Also a good user experience.",
+      review: "Great platform to read books. Also a good user experience.",
     },
     {
       img: profilePic2,
-      review:
-        "Great platform to build your skills. Also a good user experience.",
+      review: "Great platform to read books. Also a good user experience.",
     },
     {
       img: profilePic3,
-      review:
-        "Great platform to build your skills. Also a good user experience.",
+      review: "Great platform to read books. Also a good user experience.",
     },
     {
       img: profilePic4,
-      review:
-        "Great platform to build your skills. Also a good user experience.",
+      review: "Great platform to read books. Also a good user experience.",
     },
   ];
 

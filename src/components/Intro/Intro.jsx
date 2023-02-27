@@ -28,24 +28,21 @@ const Intro = () => {
           </span>
           <span>Welcome</span>
           <span>
-            Life coaching involves working with clients to help improve their
-            quality of life through various emotions and actions. A Life Coach
-            will be there to support a client throughout the coaching process
-            until they feel they have reached the goals they have set in place.
-            Life coaches will create a mentoring relationship in which clients
-            feel confident and comfortable. There are three stages to mentoring
-            relationships and the process it goes through to reach the end goal.
-            Cultivation – This is where the mentee will learn from the
-            experience of the mentor. Whilst this is happening the mentor is
-            gathering knowledge and insights on the mentee to have a clear
-            understanding of emerging issues. Separation – This stage would be
-            the end of a relationship, however, challenges tend to arise at this
-            point if one of the members is not ready to end the relationship.
-            This may be because the mentee disagrees with the process the mentor
-            thinks they have made. Redefinition – This is the point where the
-            relationship reaches the same level after successfully working
-            through the separation stage. This would mean both members feel
-            confident and comfortable in the relationship ending.
+            Reading researchers as far back as the 1960s have discussed what’s
+            known as “the Matthew effectTrusted Source,” a term that refers to
+            biblical verse Matthew 13:12: “Whoever has will be given more, and
+            they will have an abundance. Whoever does not have, even what they
+            have will be taken from them.” The Matthew effect sums up the idea
+            that the rich get richer and the poor get poorer — a concept that
+            applies as much to vocabulary as it does to money. Researchers have
+            foundTrusted Source that students who read books regularly,
+            beginning at a young age, gradually develop large vocabularies. And
+            vocabulary size can influence many areas of your life, from scores
+            on standardized tests to college admissions and job opportunities. A
+            2019 poll conducted by Cengage showed that 69 percent of employers
+            are looking to hire people with “soft” skills, like the ability to
+            communicate effectively. Reading books is the best way to increase
+            your exposure to new words, learned in context.
           </span>
         </div>
 
