@@ -11,9 +11,9 @@ const navbar = () => {
     >
       {/* left */}
       <div className="n-left">
-        <div className="n-name">
-          <button className="button n-button">Life-Coach</button>
-        </div>
+        <Link to="Home" spy={true} smooth={true}>
+          <button className="button n-button">Life-Books</button>
+        </Link>
         <Toggle />
       </div>
       {/* right */}
@@ -21,13 +21,13 @@ const navbar = () => {
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
             <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
-                Why Lifecoach
+              <Link activeClass="active" to="Intro" spy={true} smooth={true}>
+                Why LifeBooks
               </Link>
             </li>
             <li>
-              <Link to="services" spy={true} smooth={true}>
-                Courses
+              <Link activeClass="active" to="services" spy={true} smooth={true}>
+                Books
               </Link>
             </li>
           </ul>

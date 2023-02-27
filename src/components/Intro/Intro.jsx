@@ -4,13 +4,10 @@ import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import boy from "../../img/boy.png";
 
-
-
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
-
 
 const Intro = () => {
   // Transition
@@ -27,7 +24,7 @@ const Intro = () => {
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>
-            Benefits of learning through "Life Coach"
+            Benefits of learning through "Life Books"
           </span>
           <span>Welcome</span>
           <span>

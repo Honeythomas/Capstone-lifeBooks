@@ -30,7 +30,7 @@ const Home = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="https://www.skillsyouneed.com/images/rhubarb/online-learning-student.jpg"
+                src="https://i0.wp.com/ebookfriendly.com/wp-content/uploads/2020/04/Read-full-books-online-the-best-sites.jpg?resize=540%2C540&ssl=1"
                 className="d-block w-100"
                 alt="..."
                 width="900px"
@@ -39,7 +39,7 @@ const Home = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/07/learning_platform.jpeg.jpg"
+                src="https://images.newrepublic.com/3b5f4fa15f912f5ab4084f381441148c1d85b0c4.jpeg?auto=compress&ar=3%3A2&fit=crop&crop=faces&fm=jpg&ixlib=react-9.0.2&w=958&q=65&dpr=1"
                 className="d-block w-100"
                 alt="..."
                 width="900px"
@@ -48,7 +48,7 @@ const Home = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="https://cdn.elearningindustry.com/wp-content/uploads/2021/10/Online-Learning-Side-Effects-For-Students.png"
+                src="https://www.learninga-z.com/user_area/uploads/RK-overview.jpg"
                 className="d-block w-100"
                 alt="..."
                 width="900px"

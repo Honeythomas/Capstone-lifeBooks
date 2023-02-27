@@ -9,11 +9,11 @@
 }
 
 /* left side */
+
 .awesome {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 20px;
 }
 
 .seperate {
@@ -38,15 +38,33 @@
 }
 
 .button {
-  height: 1rem;
-  width: 5rem;
-  font-size: 1rem;
+  /* height: 1rem;
+  width: 5rem; */
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
-  display: flex;
+  border-radius: 40px;
+  /* display: flex; */
 }
 
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .card-title {
   display: flex;
+  text-align: center;
+}
+
+#heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+#subheading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
   text-align: center;
 }
