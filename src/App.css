@@ -17,18 +17,7 @@
 }
 
 .button {
-  /* background: linear-gradient(180deg, #002975 26.71%, #003477 99.36%);
-  /* border-radius: 40px; */
-  /* border: none;
-  color: white;
-  font-size: 15px;
-  text-align: center; */
-  /* text-align: right; */
-  /* width: 105px ;
-  /* height: 400px; */
-  /* padding:5px ;
-  padding-left: 2px; */
-  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  background: linear-gradient(180deg, #fd0f0f 26.71%, #fd0f0f 99.36%);
   box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
   border-radius: 34px;
   border: none;
@@ -42,6 +31,13 @@
   cursor: pointer;
   border: 1px solid var(--orange);
   color: var(--orange);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {

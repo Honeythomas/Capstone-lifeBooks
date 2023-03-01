@@ -2,11 +2,42 @@ import React, { useContext } from "react";
 import "./Services.css";
 // import Card from "../Card/Card";
 import { themeContext } from "../../Context";
+import { useState } from "react";
+import ReactDOM from "react-dom";
+import axios from "axios";
 
 const Services = () => {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const [book, setBook] = useState("");
+  const [result, setResult] = useState([]);
+  const [apiKey, setApiKey] = useState(
+    "AIzaSyCSgKYlV81NkINiQVeQROmctOfzOuNluzQ"
+  );
+
+  function handleChange(event) {
+    const book = event.target.value;
+
+    setBook(book);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    axios
+      .get(
+        "https://www.googleapis.com/books/v1/volumes?q=" +
+          book +
+          "&key=" +
+          apiKey +
+          "&maxResults=40"
+      )
+      .then((data) => {
+        console.log(data.data.items);
+        setResult(data.data.items);
+      });
+  }
 
   return (
     <div className="services" id="services">
@@ -17,12 +48,13 @@ const Services = () => {
           <span id="subheading">Various types of books available</span>
         </div>
 
-        <div className="container n-right">
-          <form>
+        <div className="container">
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
-                className="input-control mb-10"
+                onChange={handleChange}
+                className="form-control mb-10"
                 placeholder="Search for Books"
                 autoComplete="off"
               />
@@ -32,210 +64,15 @@ const Services = () => {
               </button>
             </div>
           </form>
-        </div>
-
-        <div className="main">
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
+          <div className="main">
+            {result.map((book) => (
+              <a target="blank" href={book.volumeInfo.previewLink}>
+                <img
+                  src={book.volumeInfo.imageLinks.thumbnail}
+                  alt={book.title}
+                />
               </a>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <br />
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://www.peppersquare.com/wp-content/uploads/2022/07/UX-UI-Design-Blog@2x.png"
-              className="card-img-top"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title">UI/UX</h5>
-              <p className="card-text">
-                UX/UI Design Professional Certificate
-                <br />
-                Duration: 6 Months
-                <br />
-                Fees: 1,50,000
-              </p>
-              <a href="/" className="btn btn-primary">
-                Apply Now
-              </a>
-            </div>
+            ))}
           </div>
         </div>
 

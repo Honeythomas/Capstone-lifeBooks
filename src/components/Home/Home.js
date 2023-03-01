@@ -2,8 +2,8 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="container">
-      <div>
+    <div className="Home" id="Home">
+      <div className="container">
         <div id="carouselExampleIndicators" className="carousel slide">
           <div className="carousel-indicators">
             <button
@@ -34,7 +34,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="..."
                 width="900px"
-                height="425px"
+                height="500px"
               />
             </div>
             <div className="carousel-item">
@@ -43,7 +43,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="..."
                 width="900px"
-                height="425px"
+                height="500px"
               />
             </div>
             <div className="carousel-item">
@@ -52,7 +52,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="..."
                 width="900px"
-                height="425px"
+                height="500px"
               />
             </div>
           </div>

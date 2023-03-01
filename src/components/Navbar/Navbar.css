@@ -1,9 +1,21 @@
 .n-wrapper {
   height: 10vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 2rem;
   top: 0;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.signIn {
+  border-radius: 34px;
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  border: none;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+  border: none;
 }
 .n-left {
   flex: 1;

@@ -8,7 +8,9 @@
   padding-top: 1rem;
 }
 
-/* left side */
+.container {
+  /* width: 100%; */
+}
 
 .awesome {
   display: flex;
@@ -48,9 +50,14 @@
 }
 
 .main {
-  display: flex;
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
   flex-wrap: wrap;
   gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-top: 50px;
 }
 .card-title {
   display: flex;
@@ -67,4 +74,18 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
+}
+
+.btn btn-danger {
+  text-align: center;
+}
+
+img {
+  /* width: 300px;
+  height: 300px; */
+  transition: all 0.3sec ease;
+}
+
+img:hover {
+  transform: scale(1.5);
 }

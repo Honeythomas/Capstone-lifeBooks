@@ -3,7 +3,12 @@
   align-items: center;
   margin: -0.5rem -3.5rem;
   position: relative;
-  margin-top: -7rem;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 250px;
 }
 .f-content {
   position: absolute;
@@ -21,8 +26,8 @@
   gap: 2rem;
 }
 
-@media screen and (max-width: 480px){
-  .f-content{
-    transform: scale(.5);
+@media screen and (max-width: 480px) {
+  .f-content {
+    transform: scale(0.5);
   }
 }
