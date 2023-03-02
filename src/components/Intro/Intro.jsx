@@ -71,7 +71,7 @@ const Intro = () => {
         <div
           className="blur"
           style={{
-            background: "#C1F5FF",
+            background: "#fd0f0f",
             top: "17rem",
             width: "21rem",
             height: "11rem",

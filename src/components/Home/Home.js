@@ -30,7 +30,7 @@ const Home = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="https://i0.wp.com/ebookfriendly.com/wp-content/uploads/2020/04/Read-full-books-online-the-best-sites.jpg?resize=540%2C540&ssl=1"
+                src="https://i.pcmag.com/imagery/articles/00cjVMgipjFlAHptWfw1bmm-10.fit_lim.size_1600x900.v1615415424.jpg"
                 className="d-block w-100"
                 alt="..."
                 width="900px"
