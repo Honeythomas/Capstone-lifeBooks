@@ -1,7 +1,8 @@
 import React from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { GoogleLoginButton } from "react-social-login-buttons";
 import { LoginSocialGoogle } from "reactjs-social-login";
 
@@ -11,7 +12,7 @@ const navbar = () => {
       <div className="n-wrapper" id="Navbar">
         {/* left */}
         <div className="n-left">
-          <Link to="Home" spy={true} smooth={true}>
+          <Link to="/home">
             <button className="button n-button">Life-Books</button>
           </Link>
           <Toggle />
@@ -21,19 +22,10 @@ const navbar = () => {
           <div className="n-list">
             <ul style={{ listStyleType: "none" }}>
               <li>
-                <Link activeClass="active" to="Intro" spy={true} smooth={true}>
-                  Why LifeBooks
-                </Link>
+                <Link to="/intro">Why LifeBooks</Link>
               </li>
               <li>
-                <Link
-                  activeClass="active"
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                >
-                  Books
-                </Link>
+                <Link to="/services">Books</Link>
               </li>
             </ul>
           </div>
@@ -60,8 +52,14 @@ const navbar = () => {
               <GoogleLoginButton />
             </LoginSocialGoogle>
           </div>
-          SignIn
         </button>
+        <Link activeClass="active" to="Cart" spy={true} smooth={true}>
+          <span className="n-right">
+            <button>
+              <i className="fas fa-cart-plus">Cart</i>
+            </button>
+          </span>
+        </Link>
       </div>
     </section>
   );

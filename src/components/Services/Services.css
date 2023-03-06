@@ -2,14 +2,10 @@
   display: flex;
   /* height: 100rem; */
   margin-bottom: 2rem;
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
   margin-bottom: 3rem;
   /* scroll: view; */
   padding-top: 1rem;
-}
-
-.container {
-  /* width: 100%; */
 }
 
 .awesome {
@@ -50,7 +46,7 @@
 }
 
 .main {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   width: 100%;
   display: grid;
   flex-wrap: wrap;
@@ -79,13 +75,18 @@
 .btn btn-danger {
   text-align: center;
 }
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: large;
+}
 
 img {
-  /* width: 300px;
-  height: 300px; */
   transition: all 0.3sec ease;
 }
 
-img:hover {
+/* img:hover {
   transform: scale(1.5);
-}
+} */

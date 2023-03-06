@@ -8,6 +8,7 @@ import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
+import { fontSize } from "@mui/system";
 
 const Intro = () => {
   // Transition
@@ -27,7 +28,8 @@ const Intro = () => {
             Benefits of learning through "Life Books"
           </span>
           <span>Welcome</span>
-          <span>
+
+          <span className="font">
             Reading researchers as far back as the 1960s have discussed what’s
             known as “the Matthew effectTrusted Source,” a term that refers to
             biblical verse Matthew 13:12: “Whoever has will be given more, and
@@ -66,18 +68,6 @@ const Intro = () => {
         <img src={Vector2} alt="" />
         <img src={boy} alt="" />
         {/* animation */}
-
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#fd0f0f",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>
       </div>
     </div>
   );

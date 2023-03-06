@@ -9,6 +9,9 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
 import { themeContext } from "./Context";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
 
 window.addEventListener("scroll", () => {
   const topBorder = document
@@ -32,14 +35,30 @@ function App() {
         color: darkMode ? "white" : "",
       }}
     >
-      <Navbar />
-      <Home />
-      <Intro />
-      <Services />
-      <Experience />
-      <Testimonial />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <>
+                <Home />
+                <Experience />
+                <Testimonial />
+                <Contact />
+              </>
+            }
+          />
+
+          <Route path="/intro" element={<Intro />} />
+
+          <Route path="/services" element={<Services />} />
+
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
