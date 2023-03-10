@@ -88,11 +88,15 @@ const Services = () => {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
+               
 
                 <h6>{book.volumeInfo.authors}</h6>
+
                 <h6>{book.saleInfo.saleability}</h6>
-                <button>Add to Cart</button>
+                <><button>Add to Cart</button></>
+                
               </a>
+              
             ))}
           </div>
 
