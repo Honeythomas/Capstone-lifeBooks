@@ -29,7 +29,7 @@ const Intro = () => {
           </span>
           <span>Welcome</span>
 
-          <span className="font">
+          <span>
             Reading researchers as far back as the 1960s have discussed what’s
             known as “the Matthew effectTrusted Source,” a term that refers to
             biblical verse Matthew 13:12: “Whoever has will be given more, and
@@ -48,7 +48,6 @@ const Intro = () => {
           </span>
         </div>
 
-        {/* social icons */}
         <div className="i-icons">
           <img
             src={Github}

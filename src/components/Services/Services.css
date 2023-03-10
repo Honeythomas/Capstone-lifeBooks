@@ -45,6 +45,16 @@
   /* display: flex; */
 }
 
+.box {
+  border: 10px;
+  justify-content: center;
+
+  background-color: #242d49;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 .main {
   /* min-height: 80vh; */
   width: 100%;

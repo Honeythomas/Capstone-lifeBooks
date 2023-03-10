@@ -11,7 +11,12 @@ import { useContext } from "react";
 import { themeContext } from "./Context";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import Cart from "./components/Cart/Cart";
+import Favorite from "./components/Favorite/Favorite";
+import reducer from "./components/Redux/reducer";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+
+const store = createStore(reducer);
 
 window.addEventListener("scroll", () => {
   const topBorder = document
@@ -28,38 +33,40 @@ function App() {
   const darkMode = theme.state.darkMode;
 
   return (
-    <div
-      className="App"
-      style={{
-        background: darkMode ? "black" : "",
-        color: darkMode ? "white" : "",
-      }}
-    >
-      <BrowserRouter>
-        <Navbar />
+    <Provider store={store}>
+      <div
+        className="App"
+        style={{
+          background: darkMode ? "black" : "",
+          color: darkMode ? "white" : "",
+        }}
+      >
+        <BrowserRouter>
+          <Navbar />
 
-        <Routes>
-          <Route
-            path="/home"
-            element={
-              <>
-                <Home />
-                <Experience />
-                <Testimonial />
-                <Contact />
-              </>
-            }
-          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Home />
+                  <Experience />
+                  <Testimonial />
+                  <Contact />
+                </>
+              }
+            />
 
-          <Route path="/intro" element={<Intro />} />
+            <Route path="/intro" element={<Intro />} />
 
-          <Route path="/services" element={<Services />} />
+            <Route path="/services" element={<Services />} />
 
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+            <Route path="/favorite" element={<Favorite />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
 }
 

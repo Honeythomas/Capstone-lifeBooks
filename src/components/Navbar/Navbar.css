@@ -1,5 +1,5 @@
 .n-wrapper {
-  height: 10vh;
+  height: 80px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
@@ -11,7 +11,7 @@
 
 .signIn {
   border-radius: 34px;
-  background: linear-gradient(180deg, #fd0f0f 26.71%, #fd0f0f 99.36%);
+  background: linear-gradient(180deg, #242d49 26.71%, #242d49 99.36%);
   border: none;
   font-size: 16px;
   padding: 11px 26px 11px 26px;
