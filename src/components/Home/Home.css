@@ -1,0 +1,23 @@
+/* .Home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+} */
+
+.Home {
+  background: rgba(255, 255, 255, 0.329);
+  border: 7px solid var(--blueCard);
+  box-shadow: var(--boxShadow);
+  border-radius: 20px;
+  width: 100%;
+  height: 510px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}

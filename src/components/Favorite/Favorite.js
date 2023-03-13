@@ -49,52 +49,131 @@ const Favorite = () => {
           margin: "20px",
         }}
       >
-        <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
           </p>
           <a href="/" className="btn btn-primary">
             Read book
           </a>
         </div>
-        <img src="..." className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
 
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
-        <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
           </p>
           <a href="/" className="btn btn-primary">
             Read book
           </a>
         </div>
-        <img src="..." className="card-img-top" alt="..." />
+
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
+          </p>
+          <a href="/" className="btn btn-primary">
+            Read book
+          </a>
+        </div>
+
+        <div className="card-body">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
+          <p className="card-text">
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
+          </p>
+          <a href="/" className="btn btn-primary">
+            Read book
+          </a>
+        </div>
+        <div className="card-body">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
+          <p className="card-text">
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
+          </p>
+          <a href="/" className="btn btn-primary">
+            Read book
+          </a>
+        </div>
+        <div className="card-body">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
+          <p className="card-text">
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
+          </p>
+          <a href="/" className="btn btn-primary">
+            Read book
+          </a>
+        </div>
+        <div className="card-body">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
+          <p className="card-text">
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
+          </p>
+          <a href="/" className="btn btn-primary">
+            Read book
+          </a>
+        </div>
+        <div className="card-body">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
+            className="card-img-top"
+            alt="..."
+          />
+          <h5 className="card-title">Book title</h5>
+          <p className="card-text">
+            Some quick example text to build on the Book title and make up the
+            bulk of the book's content.
           </p>
           <a href="/" className="btn btn-primary">
             Read book
           </a>
         </div>
       </div>
+      ;
     </>
   );
 };

@@ -13,7 +13,9 @@ const navbar = () => {
         {/* left */}
         <div className="n-left">
           <Link to="/">
-            <button className="btn btn-outline-success">Life-Books</button>
+            <button type="button" className="btn btn-info">
+              Life-Books
+            </button>
           </Link>
           <Toggle />
         </div>
@@ -22,22 +24,17 @@ const navbar = () => {
           <div className="n-list">
             <ul style={{ listStyleType: "none" }}>
               <li>
-                <button type="button" className="btn btn-outline-success">
+                <button type="button" className="btn btn-info">
                   <Link to="/intro">Why LifeBooks</Link>
                 </button>
               </li>
               <li>
-                <button type="button" className="btn btn-outline-success">
+                <button type="button" className="btn btn-info">
                   <Link to="/services">Books</Link>
                 </button>
               </li>
             </ul>
           </div>
-          {/* <Link to="contact" spy={true} smooth={true}>
-            <button type="button" class="btn btn-outline-danger">
-              Lets Connect
-            </button>
-          </Link> */}
         </div>
         <button className="signIn">
           <div>
@@ -61,8 +58,8 @@ const navbar = () => {
         </button>
         <Link activeClass="active" to="Favorite" spy={true} smooth={true}>
           <span className="n-right">
-            <button type="button" class="btn btn-outline-success">
-              <i>&#10084; Favorites</i>
+            <button type="button" className="btn btn-info">
+              <span>&#10084; Favorites</span>
             </button>
           </span>
         </Link>
