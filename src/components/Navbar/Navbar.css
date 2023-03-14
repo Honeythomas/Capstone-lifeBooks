@@ -1,17 +1,17 @@
 .n-wrapper {
-  height: 10vh;
+  height: 80px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
   top: 0;
   align-items: center;
-  background-color: black;
+  background-color: rgb(49, 19, 179);
   color: white;
 }
 
 .signIn {
   border-radius: 34px;
-  background: linear-gradient(180deg, #fd0f0f 26.71%, #fd0f0f 99.36%);
+  background: linear-gradient(180deg, #242d49 26.71%, #242d49 99.36%);
   border: none;
   font-size: 16px;
   padding: 11px 26px 11px 26px;
@@ -51,9 +51,13 @@
   cursor: pointer;
 }
 
+.btn {
+  border: 20px;
+  padding: 20px;
+}
+
 .n-button {
   flex: 2;
-  /* display: flex; */
 }
 
 @media screen and (max-width: 480px) {

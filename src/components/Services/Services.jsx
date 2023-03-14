@@ -2,20 +2,29 @@ import React, { useContext } from "react";
 import "./Services.css";
 // import Card from "../Card/Card";
 import { themeContext } from "../../Context";
-import { useState } from "react";
+import { useState } from "react/cjs/react.development";
 // import ReactDOM from "react-dom";
 import axios from "axios";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import BookDetail from "../BookDetail/BookDetail";
+import Cart from "../Favorite/Favorite";
+import Popup from "reactjs-popup";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite } from "../Redux/Actions/index";
 
 const Services = () => {
   // context
-
+  const dispatch = useDispatch();
+  const addBook = useSelector((state) => state.addBook);
+  const [addToFav, setAddToFav] = useState("");
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const [defaultBooks, setDefaultBooks] = useState([]);
   const [book, setBook] = useState("");
   const [result, setResult] = useState([]);
+  const [show, setShow] = useState(false);
+  const [bookItem, setBooks] = useState();
   const [apiKey, setApiKey] = useState(
     "AIzaSyCSgKYlV81NkINiQVeQROmctOfzOuNluzQ"
   );
@@ -54,7 +63,10 @@ const Services = () => {
         setResult(data.data.items);
       });
   }
-
+  const handleAddToFav = (id) => {
+    console.log(id, "addto fav");
+    dispatch(addFavorite(id));
+  };
   return (
     <div className="services" id="services">
       {" "}
@@ -83,7 +95,7 @@ const Services = () => {
 
           <div className="main">
             {result.map((book) => (
-              <a target="blank" href={book.volumeInfo.description}>
+              <p target="blank" href={book.volumeInfo.description}>
                 <img
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
@@ -92,36 +104,93 @@ const Services = () => {
 
                 <h6>{book.volumeInfo.authors}</h6>
 
+<<<<<<< HEAD
                 <h6>{book.saleInfo.saleability}</h6>
                 <><button>Add to Cart</button></>
                 
               </a>
               
+=======
+                <Popup
+                  trigger={<button>More details</button>}
+                  position="right center"
+                >
+                  <div className="box">
+                    Title: {book.volumeInfo.title}
+                    <br />
+                    Description: <i>{book.volumeInfo.description}</i>
+                    <br />
+                    <button
+                      onClick={() => {
+                        return (
+                          <>
+                            {handleAddToFav(book.id)} console.log(book.id,
+                            "added")
+                          </>
+                        );
+                      }}
+                      type="button"
+                      className="btn btn-outline-success"
+                    >
+                      &#10084; Add to Favorite
+                    </button>
+                  </div>
+                </Popup>
+
+                <BookDetail
+                  show={show}
+                  item={bookItem}
+                  onClose={() => setShow(false)}
+                />
+              </p>
+>>>>>>> f76ee847a357fb672c71859a6ceb92f810f52947
             ))}
           </div>
 
           <div className="main">
             {defaultBooks.map((book) => (
-              <a target="blank" href={book.volumeInfo.description}>
+              <p target="blank" href={book.volumeInfo.description}>
                 <img
                   src={book.volumeInfo.imageLinks?.thumbnail}
                   alt={book.title}
                 />
                 <h6>{book.volumeInfo.authors}</h6>
-                <h6>{book.saleInfo.saleability}</h6>
-                <button>Add to Cart</button>
-              </a>
+
+                <Popup
+                  trigger={<button>More details</button>}
+                  position="right center"
+                >
+                  <div className="box">
+                    Title: {book.volumeInfo.title}
+                    <br />
+                    Description: <i>{book.volumeInfo.description}</i>
+                    <br />
+                    <button
+                      onClick={() => {
+                        return (
+                          <>
+                            {handleAddToFav(book.id)} console.log(book.id,
+                            "added")
+                          </>
+                        );
+                      }}
+                      type="button"
+                      className="btn btn-outline-success"
+                    >
+                      &#10084; Add to Favorite
+                    </button>
+                  </div>
+                </Popup>
+              </p>
             ))}
           </div>
         </div>
-
-        <div
-          className="blur s-blur2"
-          style={{ background: "var(--Red)" }}
-        ></div>
       </div>
+      <div className="blur s-blur2" style={{ background: "var(--Red)" }}></div>
     </div>
   );
 };
 
 export default Services;
+
+// {onClick={() => addToCart(book.volumeInfo.description)}}

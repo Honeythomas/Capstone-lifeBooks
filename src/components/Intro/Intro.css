@@ -7,7 +7,7 @@
 .i-left {
   display: flex;
   position: relative;
-  /* flex: 1; */
+  flex: 1;
   flex-direction: column;
   gap: 2rem;
 }
@@ -98,6 +98,7 @@
 
   .font {
     font-size: large;
+    justify-content: left;
   }
 
   .i-right {

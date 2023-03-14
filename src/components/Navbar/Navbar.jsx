@@ -12,8 +12,10 @@ const navbar = () => {
       <div className="n-wrapper" id="Navbar">
         {/* left */}
         <div className="n-left">
-          <Link to="/home">
-            <button className="button n-button">Life-Books</button>
+          <Link to="/">
+            <button type="button" className="btn btn-info">
+              Life-Books
+            </button>
           </Link>
           <Toggle />
         </div>
@@ -22,16 +24,17 @@ const navbar = () => {
           <div className="n-list">
             <ul style={{ listStyleType: "none" }}>
               <li>
-                <Link to="/intro">Why LifeBooks</Link>
+                <button type="button" className="btn btn-info">
+                  <Link to="/intro">Why LifeBooks</Link>
+                </button>
               </li>
               <li>
-                <Link to="/services">Books</Link>
+                <button type="button" className="btn btn-info">
+                  <Link to="/services">Books</Link>
+                </button>
               </li>
             </ul>
           </div>
-          <Link to="contact" spy={true} smooth={true}>
-            <button className="button n-button">Lets Connect</button>
-          </Link>
         </div>
         <button className="signIn">
           <div>
@@ -53,10 +56,10 @@ const navbar = () => {
             </LoginSocialGoogle>
           </div>
         </button>
-        <Link activeClass="active" to="Cart" spy={true} smooth={true}>
+        <Link activeClass="active" to="Favorite" spy={true} smooth={true}>
           <span className="n-right">
-            <button>
-              <i className="fas fa-cart-plus">Cart</i>
+            <button type="button" className="btn btn-info">
+              <span>&#10084; Favorites</span>
             </button>
           </span>
         </Link>
