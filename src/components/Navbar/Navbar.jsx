@@ -59,7 +59,7 @@ const navbar = () => {
         <Link activeClass="active" to="Favorite" spy={true} smooth={true}>
           <span className="n-right">
             <button type="button" className="btn btn-info">
-              <span>&#10084; Favorites</span>
+              <span> &#10084;&#65039; Favorites</span>
             </button>
           </span>
         </Link>
