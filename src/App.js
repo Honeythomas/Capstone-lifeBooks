@@ -18,6 +18,8 @@ import { Provider } from "react-redux";
 
 const store = createStore(reducer);
 
+const handleAddToFav = (book) => {};
+
 window.addEventListener("scroll", () => {
   const topBorder = document
     .getElementById("navbar-container")

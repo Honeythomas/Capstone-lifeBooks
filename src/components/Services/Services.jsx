@@ -64,7 +64,11 @@ const Services = () => {
       });
   }
   const handleAddToFav = (id) => {
-    console.log(id, "addto fav");
+    console.log(
+      id,
+
+      "addto fav"
+    );
     dispatch(addFavorite(id));
   };
   return (
@@ -101,16 +105,21 @@ const Services = () => {
                   alt={book.title}
                 />
 
-                <h6>{book.volumeInfo.authors}</h6>
+                <h6>
+                  <b>Author: </b>
+                  {book.volumeInfo.authors}
+                </h6>
 
                 <Popup
-                  trigger={<button>More details</button>}
+                  trigger={
+                    <button className="btn btn-dark">More details</button>
+                  }
                   position="right center"
                 >
                   <div className="box">
-                    Title: {book.volumeInfo.title}
+                    <b>Title:</b> {book.volumeInfo.title}
                     <br />
-                    Description: <i>{book.volumeInfo.description}</i>
+                    <b>Description:</b> <i>{book.volumeInfo.description}</i>
                     <br />
                     <button
                       onClick={() => {
@@ -122,9 +131,9 @@ const Services = () => {
                         );
                       }}
                       type="button"
-                      className="btn btn-outline-success"
+                      className="btn btn-info"
                     >
-                      &#10084; Add to Favorite
+                      &#10084;&#65039; Add to Favorite
                     </button>
                   </div>
                 </Popup>
@@ -145,16 +154,21 @@ const Services = () => {
                   src={book.volumeInfo.imageLinks?.thumbnail}
                   alt={book.title}
                 />
-                <h6>{book.volumeInfo.authors}</h6>
+                <h6>
+                  <b>Author: </b>
+                  {book.volumeInfo.authors}
+                </h6>
 
                 <Popup
-                  trigger={<button>More details</button>}
+                  trigger={
+                    <button className="btn btn-dark">More details</button>
+                  }
                   position="right center"
                 >
                   <div className="box">
-                    Title: {book.volumeInfo.title}
+                    <b>Title:</b> {book.volumeInfo.title}
                     <br />
-                    Description: <i>{book.volumeInfo.description}</i>
+                    <b>Description:</b> <i>{book.volumeInfo.description}</i>
                     <br />
                     <button
                       onClick={() => {
@@ -166,9 +180,9 @@ const Services = () => {
                         );
                       }}
                       type="button"
-                      className="btn btn-outline-success"
+                      className="btn btn-info"
                     >
-                      &#10084; Add to Favorite
+                      &#10084;&#65039; Add to Favorite
                     </button>
                   </div>
                 </Popup>

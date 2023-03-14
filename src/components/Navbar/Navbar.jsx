@@ -36,7 +36,7 @@ const navbar = () => {
             </ul>
           </div>
         </div>
-        <button className="signIn">
+        <button className="btn btn-info mx-2">
           <div>
             <LoginSocialGoogle
               client_id={
@@ -58,8 +58,8 @@ const navbar = () => {
         </button>
         <Link activeClass="active" to="Favorite" spy={true} smooth={true}>
           <span className="n-right">
-            <button type="button" className="btn btn-info">
-              <span>&#10084; Favorites</span>
+            <button type="button" className="btn btn-info mx-2">
+              <span>&#10084;&#65039; Favorites</span>
             </button>
           </span>
         </Link>
