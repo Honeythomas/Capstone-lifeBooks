@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { connect } from "react-redux";
 
 import axios from "axios";
 
 import { useEffect } from "react";
+import { BookContext } from "../../BookContext";
+import Popup from "reactjs-popup";
 
 const Favorite = () => {
   const [book, setBook] = useState("");
@@ -11,6 +13,7 @@ const Favorite = () => {
   const [apiKey, setApiKey] = useState(
     "AIzaSyCSgKYlV81NkINiQVeQROmctOfzOuNluzQ"
   );
+  const bookCtx=useContext(BookContext);
 
   function handleChange(event) {
     const book = event.target.value;
@@ -49,129 +52,38 @@ const Favorite = () => {
           margin: "20px",
         }}
       >
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
 
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
+          {bookCtx.favorite_books&&bookCtx.favorite_books.map((book)=>{
+            return(
+              <p target="blank" href={book.volumeInfo.description}>
+              <img
+                src={book.volumeInfo.imageLinks?.thumbnail}
+                alt={book.title}
+              />
+              <h6>{book.volumeInfo.authors}</h6>
 
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
+              <Popup
+                trigger={<button>More details</button>}
+                position="right center"
+              >
+                <div className="box">
+                  Title: {book.volumeInfo.title}
+                  <br />
+                  Description: <i>{book.volumeInfo.description}</i>
+                  <br />
+                </div>
+              </Popup>
+            </p>
+            )
+          })}
+    
 
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
-        <div className="card-body">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnsUcsTOcYGdrnoVfMrGjs89-oVDyCOjvDQ&usqp=CAU"
-            className="card-img-top"
-            alt="..."
-          />
-          <h5 className="card-title">Book title</h5>
-          <p className="card-text">
-            Some quick example text to build on the Book title and make up the
-            bulk of the book's content.
-          </p>
-          <a href="/" className="btn btn-primary">
-            Read book
-          </a>
-        </div>
+
+     
+      
+     
+      
+       
       </div>
       ;
     </>

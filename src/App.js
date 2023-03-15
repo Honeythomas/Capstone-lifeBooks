@@ -15,7 +15,7 @@ import Favorite from "./components/Favorite/Favorite";
 import reducer from "./components/Redux/reducer";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-
+import { BookContextProvider,BookContext } from "./BookContext";
 const store = createStore(reducer);
 
 window.addEventListener("scroll", () => {
@@ -34,6 +34,7 @@ function App() {
 
   return (
     <Provider store={store}>
+    <BookContextProvider>
       <div
         className="App"
         style={{
@@ -66,6 +67,7 @@ function App() {
           <Footer />
         </BrowserRouter>
       </div>
+      </BookContextProvider>
     </Provider>
   );
 }

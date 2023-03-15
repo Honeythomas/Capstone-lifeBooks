@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Services.css";
 // import Card from "../Card/Card";
 import { themeContext } from "../../Context";
-import { useState } from "react/cjs/react.development";
+import { useState} from "react/cjs/react.development";
 // import ReactDOM from "react-dom";
 import axios from "axios";
 import { useEffect } from "react";
@@ -12,9 +12,13 @@ import Cart from "../Favorite/Favorite";
 import Popup from "reactjs-popup";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite } from "../Redux/Actions/index";
+import { BookContext } from "../../BookContext";
+
 
 const Services = () => {
   // context
+  const bookCtx=useContext(BookContext);
+  console.log("Book ctx:",bookCtx);
   const dispatch = useDispatch();
   const addBook = useSelector((state) => state.addBook);
   const [addToFav, setAddToFav] = useState("");
@@ -63,9 +67,13 @@ const Services = () => {
         setResult(data.data.items);
       });
   }
-  const handleAddToFav = (id) => {
-    console.log(id, "addto fav");
-    dispatch(addFavorite(id));
+  const handleAddToFav = (book) => {
+    // console.log(id, "addto fav");
+    // dispatch(addFavorite(id));
+    console.log("book:",book);
+    bookCtx.setFavorite((prev)=>{
+      return [...prev,book];
+    })
   };
   return (
     <div className="services" id="services">
@@ -100,6 +108,7 @@ const Services = () => {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
+                {console.log("Books are:",book)}
 
                 <h6>{book.volumeInfo.authors}</h6>
 
@@ -114,12 +123,9 @@ const Services = () => {
                     <br />
                     <button
                       onClick={() => {
-                        return (
-                          <>
-                            {handleAddToFav(book.id)} console.log(book.id,
-                            "added")
-                          </>
-                        );
+                        
+                            handleAddToFav(book) 
+                            console.log("Added book",book.volumeInfo);
                       }}
                       type="button"
                       className="btn btn-outline-success"
@@ -160,7 +166,7 @@ const Services = () => {
                       onClick={() => {
                         return (
                           <>
-                            {handleAddToFav(book.id)} console.log(book.id,
+                            {handleAddToFav(book)} console.log(book.id,
                             "added")
                           </>
                         );
