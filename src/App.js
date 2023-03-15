@@ -15,10 +15,8 @@ import Favorite from "./components/Favorite/Favorite";
 import reducer from "./components/Redux/reducer";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-
+import { BookContextProvider, BookContext } from "./BookContext";
 const store = createStore(reducer);
-
-const handleAddToFav = (book) => {};
 
 window.addEventListener("scroll", () => {
   const topBorder = document
@@ -36,38 +34,40 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div
-        className="App"
-        style={{
-          background: darkMode ? "black" : "",
-          color: darkMode ? "white" : "",
-        }}
-      >
-        <BrowserRouter>
-          <Navbar />
+      <BookContextProvider>
+        <div
+          className="App"
+          style={{
+            background: darkMode ? "black" : "",
+            color: darkMode ? "white" : "",
+          }}
+        >
+          <BrowserRouter>
+            <Navbar />
 
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Home />
-                  <Experience />
-                  <Testimonial />
-                  <Contact />
-                </>
-              }
-            />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Home />
+                    <Experience />
+                    <Testimonial />
+                    <Contact />
+                  </>
+                }
+              />
 
-            <Route path="/intro" element={<Intro />} />
+              <Route path="/intro" element={<Intro />} />
 
-            <Route path="/services" element={<Services />} />
+              <Route path="/services" element={<Services />} />
 
-            <Route path="/favorite" element={<Favorite />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </div>
+              <Route path="/favorite" element={<Favorite />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </div>
+      </BookContextProvider>
     </Provider>
   );
 }

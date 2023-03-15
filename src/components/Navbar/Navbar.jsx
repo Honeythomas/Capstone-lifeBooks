@@ -13,7 +13,7 @@ const navbar = () => {
         {/* left */}
         <div className="n-left">
           <Link to="/">
-            <button type="button" className="btn btn-info">
+            <button type="button" className="btn btn-outline-light">
               Life-Books
             </button>
           </Link>
@@ -36,7 +36,7 @@ const navbar = () => {
             </ul>
           </div>
         </div>
-        <button className="btn btn-info mx-2">
+        <button className="btn btn-outline-info mx-2">
           <div>
             <LoginSocialGoogle
               client_id={

@@ -12,9 +12,12 @@ import Cart from "../Favorite/Favorite";
 import Popup from "reactjs-popup";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite } from "../Redux/Actions/index";
+import { BookContext } from "../../BookContext";
 
 const Services = () => {
   // context
+  const bookCtx = useContext(BookContext);
+  console.log("Book ctx:", bookCtx);
   const dispatch = useDispatch();
   const addBook = useSelector((state) => state.addBook);
   const [addToFav, setAddToFav] = useState("");
@@ -63,13 +66,13 @@ const Services = () => {
         setResult(data.data.items);
       });
   }
-  const handleAddToFav = (id) => {
-    console.log(
-      id,
-
-      "addto fav"
-    );
-    dispatch(addFavorite(id));
+  const handleAddToFav = (book) => {
+    // console.log(id, "addto fav");
+    // dispatch(addFavorite(id));
+    console.log("book:", book);
+    bookCtx.setFavorite((prev) => {
+      return [...prev, book];
+    });
   };
   return (
     <div className="services" id="services">
@@ -104,36 +107,30 @@ const Services = () => {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
+                {console.log("Books are:", book)}
 
-                <h6>
-                  <b>Author: </b>
-                  {book.volumeInfo.authors}
-                </h6>
+                <h6>{book.volumeInfo.authors}</h6>
 
                 <Popup
                   trigger={
-                    <button className="btn btn-dark">More details</button>
+                    <button className="btn btn-info">More details</button>
                   }
                   position="right center"
                 >
                   <div className="box">
-                    <b>Title:</b> {book.volumeInfo.title}
+                    Title: {book.volumeInfo.title}
                     <br />
-                    <b>Description:</b> <i>{book.volumeInfo.description}</i>
+                    Description: <i>{book.volumeInfo.description}</i>
                     <br />
                     <button
                       onClick={() => {
-                        return (
-                          <>
-                            {handleAddToFav(book.id)} console.log(book.id,
-                            "added")
-                          </>
-                        );
+                        handleAddToFav(book);
+                        console.log("Added book", book.volumeInfo);
                       }}
                       type="button"
-                      className="btn btn-info"
+                      className="btn btn-outline-success"
                     >
-                      &#10084;&#65039; Add to Favorite
+                      &#10084; Add to Favorite
                     </button>
                   </div>
                 </Popup>
@@ -154,33 +151,29 @@ const Services = () => {
                   src={book.volumeInfo.imageLinks?.thumbnail}
                   alt={book.title}
                 />
-                <h6>
-                  <b>Author: </b>
-                  {book.volumeInfo.authors}
-                </h6>
+                <h6>{book.volumeInfo.authors}</h6>
 
                 <Popup
                   trigger={
-                    <button className="btn btn-dark">More details</button>
+                    <button className="btn btn-info">More details</button>
                   }
                   position="right center"
                 >
                   <div className="box">
-                    <b>Title:</b> {book.volumeInfo.title}
+                    Title: {book.volumeInfo.title}
                     <br />
-                    <b>Description:</b> <i>{book.volumeInfo.description}</i>
+                    Description: <i>{book.volumeInfo.description}</i>
                     <br />
                     <button
                       onClick={() => {
                         return (
                           <>
-                            {handleAddToFav(book.id)} console.log(book.id,
-                            "added")
+                            {handleAddToFav(book)} console.log(book.id, "added")
                           </>
                         );
                       }}
                       type="button"
-                      className="btn btn-info"
+                      className="btn btn-outline-success"
                     >
                       &#10084;&#65039; Add to Favorite
                     </button>
@@ -199,3 +192,5 @@ const Services = () => {
 export default Services;
 
 // {onClick={() => addToCart(book.volumeInfo.description)}}
+
+// &#10084;&#65039;
