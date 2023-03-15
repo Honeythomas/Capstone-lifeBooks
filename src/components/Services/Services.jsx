@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Services.css";
 // import Card from "../Card/Card";
 import { themeContext } from "../../Context";
-import { useState } from "react/cjs/react.development";
+
 // import ReactDOM from "react-dom";
 import axios from "axios";
 import { useEffect } from "react";
